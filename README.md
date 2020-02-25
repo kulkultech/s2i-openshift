@@ -1,6 +1,34 @@
 
 # Creating a basic S2I builder image  
 
+## TL;DR
+
+1. Make builder image
+
+```bash
+make build
+```
+
+2. Test build image against test-app
+
+```bash
+make test
+```
+
+3. Build image against test-app
+
+```bash
+s2i build test/test-app/ --incremental=false s2i-solver-errors new-image
+# with new-image is an arbitrary image name
+```
+
+4. Run the resulted image
+
+```bash
+docker run -it new-image
+# where new-image is the name of image you use when build the image
+```
+
 ## Getting started  
 
 ### Files and Directories  

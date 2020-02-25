@@ -23,6 +23,5 @@ echo "---> Installing application source..."
 cp -Rf /tmp/src/. ./
 
 echo "---> Building application from source..."
-# TODO: Add build steps for your application, eg npm install, bundle install, pip install, etc.
-# for python for example if we use requirements.txt
-# pip install -r requirements.txt
+cat app.py
+pip install -r requirements.txt
